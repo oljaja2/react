@@ -1,3 +1,4 @@
+import styles from "./Profile.module.css";
 const Profile = () => {
   return (
     <div className="row">
@@ -9,11 +10,11 @@ const Profile = () => {
         />
       </div>
       <div className="col-sm-9">
-        <h1>Фамилия имя</h1>
-        <h2>о себе</h2>
+        <h1 style={{ backgroundColor: "lightblue" }}>Фамилия имя</h1>
+        <h2 className={styles.about}>о себе</h2>
         <p>email 555@mail.ru</p>
         <p>id: 2</p>
-        <p>Lorem ipsum dolor sit consectetur.</p>
+        <p className={styles.paragraph}>Lorem ipsum dolor sit consectetur.</p>
       </div>
     </div>
   );
