@@ -14,7 +14,8 @@ const Friends = () => {
   return <h2>Мои друзья</h2>;
 };
 
-function App() {
+function App(props) {
+  console.log(props);
   return (
     <div className="container-fluid mt-5">
       <div className="row">
@@ -39,7 +40,10 @@ function App() {
         </div>
         <div className="col-sm-9">
           <Routes>
-            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/profile"
+              element={<Profile function={props.function} />}
+            />
             <Route path="/messages" element={<Messages />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/friends" element={<Friends />} />
