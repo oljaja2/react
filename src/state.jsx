@@ -6,16 +6,20 @@ const user = {
   avatar: "https://www.seekpng.com/png/full/356-3562377_personal-user.png",
 };
 const users = {
-  0: { name: "Татьяна", lastname: "Петрова" },
-  1: { name: "Эдуард", lastname: "Мышкин" },
-  2: { name: "Федор", lastname: "Павловский" },
-  3: { name: "Михаил", lastname: "Зиновьев" },
-  4: { name: "Надежда", lastname: "Шумова" },
-  5: { name: "Елена", lastname: "Тимонова" },
+  0: { name: "Татьяна", lastname: "Петрова", id: 4 },
+  1: { name: "Эдуард", lastname: "Мышкин", id: 17 },
+  2: { name: "Федор", lastname: "Павловский", id: 22 },
+  3: { name: "Михаил", lastname: "Зиновьев", id: 6 },
+  4: { name: "Надежда", lastname: "Шумова", id: 33 },
+  5: { name: "Елена", lastname: "Тимонова", id: 45 },
 };
-export function getUser() {
+export function getUser(userId) {
+  for (let i = 0; i < Object.keys(users).length; i++) {
+    if (users[i].id == userId) return users[i];
+  }
   return user;
 }
+
 export function getUsers() {
   return users;
 }
