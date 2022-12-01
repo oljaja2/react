@@ -35,6 +35,7 @@ class Friends extends React.Component {
           />
         );
       }
+      this.setState({ userRow: userRow });
     });
   }
 
@@ -47,7 +48,7 @@ class Friends extends React.Component {
             <th scope="col">Фамилия и Имя</th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>{this.state.userRow}</tbody>
       </table>
     );
   }
